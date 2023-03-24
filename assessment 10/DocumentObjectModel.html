@@ -1,0 +1,256 @@
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <p>Q1)Write the code to access element which is having id as "text"</p>
+        <p>CODE</p>
+        <p>HTML</br><img src="./fdom.png" width="80%" height="300px"></br>JS</br>let text=document.getElementById('text');</br>function callme(){</br>console.log(text.innerText);</br>}</p>
+        <p>OUTPUT</p>
+        <p>Output</br>HTML</br>Welcome to prepbytes</br>JS</br>Welcome to prepbytes</p><hr>
+
+        <p>Q2)Write the code to access element which is having tag as "h1"</p>
+        <p>CODE</p>
+        <p>HTML</br><img src="./sdom.png" width="80%" height="300px">JS</br>let text=document.getElementsByTagName('h1');</br>function callme(){</br>console.log(text[0].innerHTML);</br>}</p>
+        <p>OUTPUT</p>
+        <p>Output</br>HTML</br>Welcome to prepbytes</br>JS</br>Welcome to prepbytes</p><hr>
+
+        <p>Q3)Write the code to access element which is having class as "box"</p>
+        <p>CODE</p>
+        <p>HTML</br><img src="./tdom.png" width="80%" height="300px">JS</br>let text=document.getElementsByClassName('box');</br>function callme(){</br>console.log(text[0].innerText);</br>}</p>
+        <p>OUTPUT</p>
+        <p>Output</br>HTML</br>Welcome to prepbytes</br>JS</br>Welcome to prepbytes</p><hr>
+
+        <p>Q4)Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</p>
+        <p>CODE</p>
+        <p>HTML</br><img src="./fodom.png" width="80%" height="300px">JS</br>let text=document.getElementById('text');</br>function callme(){</br>let text1="Hello World";</br>console.log(text1);</br>}</p>
+        <p>OUTPUT</p>
+        <p>Output</br>HTML</br>Hello</br>JS</br>Hello World</p><hr>
+
+        <p>Q5)Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</p>
+        <p>CODE</p>
+        <p>HTML</br><img src="./fidom.png" width="80%" height="300px">JS</br>let text=document.getElementById('text');</br>function callme(){</br>let text1="Welcome to Elevation Academy";</br>text.innerText=text1;</br>console.log(text1);</br>}</p>
+        <p>OUTPUT</p>
+        <p>Output</br>HTML</br>hello world=>Welcome to prepbytes</br>JS</br>Welcome to prepbytes</p><hr>
+
+        <p>Q6)Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</p>
+        <p>CODE</p>
+        <p>HTML</br><img src="./sidom.png" width="80%" height="300px">JS</br>let text=document.getElementById('heading');</br>function callme(){</br>console.log(text.innerText);</br>}</p>
+        <p>OUTPUT</p>
+        <p>Output</br>HTML</br>Hello</br>JS</br>Hello</p><hr>
+
+        <p>Q7)Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.</p>
+        <p>CODE</p>
+        <p></br><img src="./sedom.png" width="80%" height="300px">CSS</br>.parent{</br>display:flex;</br>}</br>.child{</br>margin:20px;</br>background-color: red;</br>width:100px;</br>height:100px;</br>}</br>JS</br>let parent=document.querySelector('.parent');</br>let btn=document.querySelector('button');</br>btn.addEventListener('click', () =>{</br>parent.setAttribute('style','flex-direction:column');</br>})</p>
+        <p>OUTPUT</p>
+        <p>Output</br>3 boxes shows as column</p><hr>
+        
+        <p>Q8)What’s the difference between window vs document?</p>
+        <table border="1px">
+            <tr>
+                <th>Document</th>
+                <th>Window</th>
+            </tr>
+            <tr>
+                <td>It represents the document loaded inside the window or browser.</td>
+                <td>It represents the browser window in which you are seeing the content.</td>      
+            </tr>
+            <tr>
+                <td>The properties related to it are sorted in the document object.</td>
+                <td>The properties related to it are stored in the window object.</td>      
+            </tr>
+            <tr>
+                <td>It is loaded after the loading window because the window contains a document.</td>
+                <td>It is loaded before the loading window because the window contains a document.</td>      
+            </tr>
+            <tr>
+                <td>It is the root element of the document object model.</td>
+                <td>The window is the global element for all objects,functions,etc.</td>      
+            </tr>
+            <tr>
+                <td>It is an object of the window.</td>
+                <td>It is an object of the browser.</td>      
+            </tr>
+            <tr>
+                <td>We can not access windows objects properties inside the document.</td>
+                <td>We can access windows objects properties inside the document.</td>      
+            </tr>
+            <tr>
+                <td>Example:document.title will return the title of the document.</td>
+                <td>Example:window.document will return the title of the document.</td>      
+            </tr>
+            <tr>
+                <td>logically:</br>document:{properties}</td>
+                <td>logically:</br>window:{</br>document:{properties}</br>}</td>      
+            </tr>
+            <tr>
+                <td>> document.title</br>< 'React App'</td>
+                <td>>window.document.title</br>< 'React App'</td>      
+            </tr>
+
+        </table><hr>
+
+        <p>Q9)Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</p>
+        <p>CODE</p>
+        <p>HTML</br><img src="./ndom.png" width="80%" height="300px">JS</br>function callme(){</br>let date=new Date();</br>let hrs=date.getHours();</br>let mins=date.getMinutes();</br>let secs=date.getSeconds();</br>if(hrs>12){</br>hrs=hrs-12;</br>}</br>console.log(hrs+":"+mins+":"+secs);</br>document.getElementById('hr').innerHTML=hrs;</br>document.getElementById('min').innerHTML=mins;</br>document.getElementById('sec').innerHTML=secs;</br>}</br>setInterval(callme,1000);</p>
+        <p>OUTPUT</p>
+        <p>Output</br>HTML</br>10:00:00</br>JS</br>10:00:00</p><hr>
+
+        <p>Q10)write code to implement guess the number</p>
+        <p>CODE</p>
+        <p>HTML</br><img src="./guessdom.png" width="80%" height="300px">CSS</br>
+        <pre>body{
+            background-color:rgb(58, 12, 12);
+        }
+        .d1{
+            border:1px solid white;
+            position: absolute;
+            left:20px;
+            top:30px;
+            height:60px;
+            width:140px;
+            background-color: white;
+        }
+        #p1{
+            position: absolute;
+            left:23px;
+            font-size: 20px;
+            top:-3px;
+        }
+        .p2{
+            font-size: 35px;
+            position: absolute;
+            right:20px;
+            top:10px;
+            color:white;
+        }
+        .b1{
+            font-size: 35px;
+            position: absolute;
+            left:500px;
+            top:120px;
+            color:white;
+            font-size: 40px;
+        }
+        .hr{
+            color:white;
+            height:5px;
+            width:100%;
+            position: absolute;
+            top:240px;
+            right:2px;
+            background-color: white;
+        }
+        .d2{
+            background-color: white;
+            width:150px;
+            height:140px;
+            position: absolute;
+            left:600px;
+            top:180px;
+        }
+        #p3{
+            font-size: 60px;
+            position: absolute;
+            left:60px;
+            top:-25px;
+        }
+        #ip{
+            border:4px solid white;
+            background-color:rgb(58, 12, 12);
+            position: absolute;
+            left:250px;
+            top:360px;
+            width:230px;
+            height:110px;
+            font-size: 50px;
+            text-align: center;
+            color:white;
+        }
+        .d3{
+            position: absolute;
+            left:315px;
+            top:500px;
+            width:100px;
+            height:60px;
+        }
+        #p4{
+            font-size: 18px;
+        }
+        #p5{
+            font-size: 40px;
+            position: absolute;
+            left:750px;
+            top:330px;
+            color:white;
+        }
+        #p6{
+            font-size: 20px;
+            position: absolute;
+            left:770px;
+            top:450px;
+            color:white;
+        }
+        #p7{
+            font-size: 20px;
+            position: absolute;
+            left:770px;
+            top:490px;
+            color:white;
+        }
+        .i1{
+            position: absolute;
+            left:730px;
+            top:470px;
+        }
+        .i2{
+            position: absolute;
+            left:730px;
+            top:515px;
+        }
+        .da{
+            border:1px solid black;
+            height:100px;
+            width:100px;
+        }</pre>
+    <pre>JS</br>let randomNumber=Math.floor(Math.random()*100);
+        let inputval=document.getElementById('ip');
+        let btn=document.querySelector('button');
+        para=document.getElementById('p5');
+        let count=100;
+        let score=0;
+        function callme(){
+            console.log(randomNumber);
+            if(randomNumber>parseInt(inputval.value)){
+                console.log("Your Guess Is Low");
+                document.getElementById('p5').innerHTML="Your Guess Is Low";
+                count--;
+                document.getElementById('p6').innerHTML="Chances:"+count;
+            }
+            else if(randomNumber<parseInt(inputval.value)){
+                console.log("Your Guess Is High");
+                document.getElementById('p5').innerHTML="Your Guess Is High";
+                count--;
+                document.getElementById('p6').innerHTML="Chances:"+count;
+            }
+            else{
+                console.log(randomNumber);
+                document.getElementById('p3').innerHTML=randomNumber;
+                count--;
+                document.getElementById('p6').innerHTML="Chances:"+count;
+                score++;
+                document.getElementById('p7').innerHTML="Highscore:"+score;
+                document.body.style.backgroundColor = "darkgreen";
+            }
+        }
+    </pre></p>
+        <p>OUTPUT</p>
+        <p>Output</br><img src="./guess.png" height="300px"></p><hr>
+
+
+        </body>
+
+
+
+
+    </html>
